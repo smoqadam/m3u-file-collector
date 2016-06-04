@@ -7,7 +7,7 @@ But by this simple python script you can copy all files in your playlist to a fo
 first you have to export your playlist as a [m3u](https://en.wikipedia.org/wiki/M3U) file
 
 ```python
-python m3u-file-collector.py <playlist.m3u> <destination>
+$ python m3u-file-collector.py <playlist.m3u> <destination>
 ```
 
 - first argument must be a m3u file.
