@@ -3,6 +3,7 @@ from itertools import count
 import shutil
 import os
 import sys
+import urllib
 
 
 try :
@@ -29,7 +30,7 @@ try :
         for line in f :
                 line = line.strip()
                 if line and line[0] != '#' :
-                    files.append(line)
+                    files.append(urllib.unquote(line).decode('utf8'))
 except IOError :
     print ("File not found.")
     sys.exit(1)
