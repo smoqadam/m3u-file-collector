@@ -29,6 +29,9 @@ try :
     with open(m3ufile) as f:
         for line in f :
                 line = line.strip()
+                # Strip URL scheme
+                if line.startswith('file://'):
+                    line = line[len('file://'):]
                 if line and line[0] != '#' :
                     files.append(urllib.unquote(line).decode('utf8'))
 except IOError :
